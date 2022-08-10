@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package pbjson;
+
+message Small {
+    string name = 1;
+    double height = 2;
+}
+
+message Medium {
+    string name = 1;
+    double height = 2;
+    bytes description = 3;
+    float num = 4;
+    bool tru = 5;
+}
+
+message Large {
+    message Info {
+        string id = 1;
+        string name = 2;
+        bool lit = 3;
+    }
+    string name = 1;
+    double height = 2;
+    bytes description = 3;
+    float num = 4;
+    bool tru = 5;
+    repeated Info data = 6;
+}
